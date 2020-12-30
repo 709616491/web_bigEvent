@@ -19,7 +19,7 @@
       <div class="title-box"></div>
       <!-- 登录 -->
       <div class="login_box">
-        <form class="layui-form" action="">
+        <form class="layui-form" id="form_login">
           <!-- 账号 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
@@ -28,7 +28,7 @@
           <!-- 密码 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" />
+            <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input" />
           </div>
           <!-- 提交 -->
           <div class="layui-form-item">
@@ -42,7 +42,7 @@
       </div>
       <!-- 注册 -->
       <div class="reg_box" style="display: none">
-        <form class="layui-form" action="">
+        <form class="layui-form" id="form_reg">
           <!-- 账号 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
@@ -51,12 +51,12 @@
           <!-- 密码 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" />
+            <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input" />
           </div>
           <!-- 确认密码 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
-            <input type="password" name="repassword" required lay-verify="required" placeholder="再次确认密码" autocomplete="off" class="layui-input" />
+            <input type="password" name="repassword" required lay-verify="required|repwd" placeholder="再次确认密码" autocomplete="off" class="layui-input" />
           </div>
           <!-- 提交 -->
           <div class="layui-form-item">
@@ -69,6 +69,8 @@
         </form>
       </div>
     </div>
+    <!-- 引入layui的js文件 -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/js/login.js"></script>
   </body>
