@@ -8,11 +8,39 @@
     <link rel="stylesheet" href="/assets/css/login.css" />
   </head>
   <body>
+    <!-- 版心 -->
     <div class="layui-main">
+      <!-- logo  -->
       <img src="/assets/images/logo.png" alt="" />
     </div>
+    <!-- 登录注册 -->
     <div class="loginAndRegBox">
+      <!-- 标题 -->
       <div class="title-box"></div>
+      <!-- 登录 -->
+      <div class="login_box">
+        <form class="layui-form" action="">
+          <!-- 账号 -->
+          <div class="layui-form-item">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" />
+          </div>
+          <!-- 密码 -->
+          <div class="layui-form-item">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" />
+          </div>
+          <!-- 提交 -->
+          <div class="layui-form-item">
+            <button class="layui-btn layui-btn-fluid" lay-submit>立即提交</button>
+          </div>
+        </form>
+        <a href="javascript:;" class="go_reg">去注册页面</a>
+      </div>
+      <!-- 注册 -->
+      <div class="reg_box" style="display: none">
+        <a href="javascript:;" class="go_login">去登陆</a>
+      </div>
     </div>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>

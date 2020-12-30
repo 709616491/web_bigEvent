@@ -17,3 +17,9 @@ body {
   transform: translate(-50%, -50%);
   background-color: #fff;
 }
+/* 标题 */
+.title-box {
+  margin: 5px;
+  background: url('/assets/images/login_title.png') no-repeat center;
+  height: 35px;
+}
