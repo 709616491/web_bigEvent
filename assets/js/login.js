@@ -35,7 +35,7 @@ $(function () {
     }
     $.ajax({
       type: 'POST',
-      url: 'http://ajax.frontend.itheima.net/api/reguser',
+      url: '/api/reguser',
       data,
       success(res) {
         if (res.status !== 0) return layer.msg(res.message)
@@ -51,7 +51,7 @@ $(function () {
     e.preventDefault()
     $.ajax({
       type: 'POST',
-      url: 'http://ajax.frontend.itheima.net/api/login',
+      url: '/api/login',
       data: $(this).serialize(),
       success(res) {
         if (res.status !== 0) return layer.msg(res.message)
