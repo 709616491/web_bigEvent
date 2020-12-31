@@ -1,12 +1,26 @@
 $(function () {
+  // 获取用户信息
   getUserMsg()
+  //   退出
+  $('#indexExit').on('click', function () {
+    layui.layer.confirm('确定要退出吗?', { icon: 3, title: '提示' }, function (index) {
+      // 确定则进入函数体
+      // 1.  清除本地存储的token数据
+      localStorage.removeItem('token')
+      // 2.  发起请求清除服务器的token数据
+      //   这次未提供后端接口，所以不清除
+      // 3.  跳转到登录页面
+      location.href = '/login.html'
+
+      layer.close(index)
+    })
+  })
 })
 // 发送请求获取用户信息
 function getUserMsg() {
   $.ajax({
     type: 'GET',
     url: '/my/userinfo',
-    headers: { Authorization: localStorage.getItem('token') || '' },
     success(res) {
       if (res.status !== 0) return layui.layer.msg('用户信息获取失败')
       renderUser(res.data)
