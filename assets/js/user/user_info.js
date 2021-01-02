@@ -37,6 +37,7 @@ $(function () {
       data: $(this).serialize(),
       success(res) {
         if (res.status !== 0) return layer.msg('提交失败')
+        layer.msg('修改信息成功！')
         // 修改父页面的头像和name信息
         window.parent.getUserMsg()
       }
