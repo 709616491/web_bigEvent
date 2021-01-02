@@ -19,7 +19,7 @@ $(function () {
   $('#btnChooseImage').on('click', function () {
     $('#file').click()
   })
-  //   监听file的改变事件
+  //   监听file的change事件
   $('#file').on('change', function (e) {
     const fileList = e.target.files
     // const fileList = this.files
@@ -33,6 +33,7 @@ $(function () {
 
   //   将裁剪后的图片 传到服务器
   $('#btnUpload').on('click', function () {
+    // 裁剪+转换
     // 用户裁剪之后的头像,转化为 `base64` 格式的字符串
     var dataURL = $image
       .cropper('getCroppedCanvas', {
