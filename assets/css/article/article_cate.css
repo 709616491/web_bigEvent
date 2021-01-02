@@ -21,7 +21,8 @@ body {
   padding-right: 30px;
 }
 
-#form {
+#form-add,
+#form-edit {
   padding-right: 30px;
   padding-top: 20px;
 }
