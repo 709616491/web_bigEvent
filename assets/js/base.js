@@ -14,8 +14,8 @@ $.ajaxPrefilter(function (options) {
     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
       // 强制清除令牌
       localStorage.removeItem('token')
-      // 跳转到登陆页面
-      location.href = '/login.html'
+      // 跳转到登陆页面  顶级对象 解决iframe钓鱼bug
+      window.top.location.href = '/login.html'
     }
   }
 })
