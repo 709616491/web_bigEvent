@@ -78,4 +78,25 @@ $(function () {
       }
     })
   }
+
+  // 删除功能
+  $('tbody').on('click', '.btn-delete', function () {
+    const id = $(this).attr('data-id')
+    const len = $('.btn-delete').length
+    layer.confirm('确认删除?', { icon: 3, title: '提示' }, function (index) {
+      $.ajax({
+        type: 'GET',
+        url: '/my/article/delete/' + id,
+        success(res) {
+          if (res.status !== 0) return layer.msg('文章删除失败')
+          layer.msg('文章删除成功')
+          // 如果当前页文章还剩0个则  切换页面
+          if (len === 1) q.pagenum = q.pagenum === 1 ? 1 : q.pagenum - 1
+          // 重新渲染
+          initArtList()
+        }
+      })
+      layer.close(index)
+    })
+  })
 })

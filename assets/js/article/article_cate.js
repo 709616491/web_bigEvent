@@ -24,6 +24,7 @@ $(function () {
       //   弹出框大小
       area: ['500px', '250px'],
       title: '添加文章分类',
+      // 弹出层采用模板结构  不用隐藏
       content: $('#tpl-form-add').html()
     })
   })
