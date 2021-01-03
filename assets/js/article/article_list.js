@@ -11,7 +11,7 @@ $(function () {
   }
   initCate()
   initArtList()
-  //   获取文章列表
+  // 查  获取文章列表
   function initArtList() {
     $.ajax({
       type: 'GET',
@@ -79,7 +79,7 @@ $(function () {
     })
   }
 
-  // 删除功能
+  // 删 删除功能
   $('tbody').on('click', '.btn-delete', function () {
     const id = $(this).attr('data-id')
     const len = $('.btn-delete').length
