@@ -34,7 +34,7 @@ $(function () {
   //   将裁剪后的图片 传到服务器
   $('#btnUpload').on('click', function () {
     // 裁剪+转换
-    // 用户裁剪之后的头像,转化为 `base64` 格式的字符串
+    // 用户裁剪之后的头像,转化为 `base64` 格式的字符串blob
     var dataURL = $image
       .cropper('getCroppedCanvas', {
         // 创建一个 Canvas 画布
