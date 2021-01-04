@@ -2,7 +2,8 @@
 // 这里的形参options就是ajax请求中的实参对象
 $.ajaxPrefilter(function (options) {
   // 每个请求都得拼接根路径
-  options.url = 'http://ajax.frontend.itheima.net' + options.url
+  options.url = 'http://api-breakingnews-web.itheima.net' + options.url
+
   // 如果是需要令牌的就在请求前加上头部
   if (options.url.indexOf('/my') !== -1) {
     options.headers = { Authorization: localStorage.getItem('token') || '' }
