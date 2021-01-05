@@ -69,7 +69,7 @@ $(function () {
         let obj = document.querySelector('#content_ifr').contentWindow.document.querySelector('#tinymce')
         obj.innerHTML = data.content
         // 填充图片路径
-        $image.prop('src', 'http://ajax.frontend.itheima.net' + data.cover_img)
+        $image.prop('src', 'http://api-breakingnews-web.itheima.net' + data.cover_img)
         // 3. 初始化裁剪区域
         $image.cropper(options)
       }
