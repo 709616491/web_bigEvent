@@ -5,7 +5,7 @@ $.ajaxPrefilter(function (options) {
   options.url = 'http://api-breakingnews-web.itheima.net' + options.url
 
   // 如果是需要令牌的就在请求前加上头部
-  if (options.url.indexOf('/my') !== -1) {
+  if (options.url.indexOf('/my/') !== -1) {
     options.headers = { Authorization: localStorage.getItem('token') || '' }
   }
 
