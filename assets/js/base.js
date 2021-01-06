@@ -10,9 +10,10 @@ $.ajaxPrefilter(function (options) {
   }
 
   // 请求完成
-  options.complete = function (res) {
+  options.complete = function (xhr) {
+    // xhr 是一个XMLHttpRequest对象
     // 服务器响应信息为不符合要求
-    if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+    if (xhr.responseJSON.status === 1 && xhr.responseJSON.message === '身份认证失败！') {
       // 强制清除令牌
       localStorage.removeItem('token')
       // 跳转到登陆页面  顶级对象 解决iframe钓鱼bug
